@@ -1,0 +1,211 @@
+.title {
+    color: green;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10px 0 10px;
+    background-color: blue;
+    box-sizing: border-box;
+}
+header,main,nav,footer{
+    width: 100%;
+    background-color: blue;
+    padding: 30px 0 30px 0;
+    color: floralwhite;
+}
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    height: 50px;
+    background-color: #2269E0;
+}
+.menu li{
+    width: 100px;
+    list-style-type: none;
+    display: inline-block;
+    background-color: yellow;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border-style: solid; /*Activa para poder hacer el borde redondéado*/
+    border-radius: 20px; /*Para un borde redondeado*/   
+}
+.centrar{
+    text-align: center;
+}
+.img-izq{
+    width: 600px;
+    max-height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+.img-xsmall{
+    width: 15%;
+    height: auto;
+}
+.img-medium{
+    width: 100%;
+    height: auto;
+}
+.img-medium2{
+    width: 40%;
+    height: auto;
+}
+.inicio{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    text-align: center;
+}
+.inicio-div{
+    width: fit-content;
+}
+.texto-izq{
+    text-align: left;
+    margin-left: 10px;
+}
+.texto-der{ 
+    text-align:right;
+    margin-right: 10px;
+}
+.main-inicio{
+    background-color: blue;
+    margin-top: 30px;
+    color: #696969;
+}
+seccion p{
+    margin-bottom: 3px;
+}
+.main-inicio section{
+    background-color: yellow;
+    color: floralwhiteactive;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-inicio h2{
+    color: #696969;
+    font-weight: bolzder;
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+#tabla_2{
+    border-collapse: collapse;
+    margin-bottom: auto;
+}
+#tabla_2 th{
+    background-color: blue;
+    color:floralwhite ;
+}
+#tabla_2 td{
+    border-style: solid;
+    border-width: 1px;
+    border-color:#696969;
+    padding: 10px;
+}
+
+.imagen-principal img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.galeria{
+    display: flex;
+    overflow-y: auto;
+    padding: 16px;
+}
+.card{
+    margin-right: 10px;
+    position: relative;
+}
+.cuerpo-card{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    color: floralwhite;
+    background-color: rgb(0, 0, 0, 0.2)
+}
+.cuerpo-card h5, .cuerpo-card p{
+    margin: 0;
+}
+.card img{
+   width: 400px;
+    object-fit: cover;
+    height: 500px;
+}
+
+/*Deslizar*/
+.mas{
+    position: absolute;
+    padding: 6px;
+    transform: translateX(-20px);
+    color: floralwhite;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.car:hover .mas {
+    transform: translateX(0);
+    opacity: 1;
+}
+.car:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+} 
+
+/*Para flecha*/
+.ver-mas{
+  position: relative;
+  padding: 0; 
+}
+.ver-mas::after{
+  content: '←'; /* Carácter de flecha */
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.ver-mas:hover::after{
+  opacity: 1;
+  right: -20px; /* Se mueve hacia afuera mientras aparece */
+}
+
+
+/*
+.cr{
+    width: 400px;
+    border: 0px solid #eee;
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.mas{
+    color: #696969;
+    font-weight: bold;
+    transform: translateX(-20px); /* Oculto a la izquierda 
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Al pasar el mouse, el texto "Ver más" aparece
+.car:hover .mas {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.car:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+} */
+
